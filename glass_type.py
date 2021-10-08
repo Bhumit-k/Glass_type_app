@@ -75,11 +75,11 @@ st.sidebar.subheader("Visuliazation Selector")
 plot_list = st.sidebar.multiselect('Select the Plots',("Corr_heatmap","line_chart",'area_chart','Count_plot','piechart','boxplot')) 
 if 'line_chart' in plot_list:
     st.subheader("Line Chart")  
-    st.linechart(glass_df) 
+    st.line_chart(glass_df) 
 
 if 'area_chart' in plot_list:
     st.subheader("Area Chart")
-    st.areachart(glass_df)
+    st.area_chart(glass_df)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 if "Corr_heatmap" in plot_list:
