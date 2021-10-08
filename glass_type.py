@@ -43,8 +43,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, rando
 
 #features_col = ['RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'] 
 @st.cache() 
-def prediction(model,'ri', 'na', 'mg', 'al', 'si', 'k', 'ca', 'ba', 'fe'):
-    glass_type = model.predict([['ri', 'na', 'mg', 'al', 'si', 'k', 'ca', 'ba', 'fe']])
+def prediction(model, ri, na, mg, al, si, k, ca, ba, fe):
+    glass_type = model.predict([[ri, na, mg, al, si, k, ca, ba, fe]])
     glass_type = glass_type[0]
     if glass_type == 1:
         return "Building Windows Float Processed"
