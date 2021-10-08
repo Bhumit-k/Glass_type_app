@@ -12,6 +12,7 @@ from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precisio
 from sklearn.metrics import precision_score, recall_score 
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.ensemble import RandomForestClassifier
 # Loading the dataset.
 @st.cache()
 def load_data():
