@@ -153,7 +153,7 @@ if classifier == "Random Forest Classifier":
         rfc_model.fit(X_train,y_train)
         y_pred = rfc_model.predict(X_test)
         accuracy = rfc_model.score(X_test,y_test)
-        glass_type = prediction(rfc_model,'ri', 'na', 'mg', 'al', 'si', 'k', 'ca', 'ba', 'fe')
+        glass_type = prediction(rfc_model,ri, na, mg, al, si, k, ca,ba,fe)
         st.write('Type Of Glass Predicted is',glass_type)
         st.write("Accuracy",accuracy.round(2))
         plot_confusion_matrix(rfc_model,X_test,y_test)
